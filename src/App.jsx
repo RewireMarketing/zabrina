@@ -7,7 +7,7 @@ const C = {
   bg:       '#0f0f17',
   surface:  '#1a1a2e',
   surface2: '#22223b',
-  border:   '#2d2d4a',
+  border:   '#2d2d4a',h
   pink:     '#ff4f8b',
   green:    '#22c55e',
   yellow:   '#f59e0b',
@@ -117,7 +117,7 @@ function MoneyModelTab() {
           <Card><KPI label="Netto omsætning" value="3,89M DKK" color={C.green} sub="Brutto 4,32M · Refund 431K" /></Card>
           <Card><KPI label="Aktive leads" value="38.156" color={C.blue} sub="40.252 minus bounces/DNC" /></Card>
           <Card><KPI label="Betalende kunder" value="2.257" color={C.purple} sub="Verificeret fra ordredata" /></Card>
-          <Card><KPI label="ROAS (netto)" value="40,75x" color={C.green} sub="95.377 DKK spend · all-time" /></Card>
+          <Card><KPI label="ROAS (netto)" value="3,98x" color={C.green} sub="977.677 DKK spend · all-time" /></Card>
         </Grid>
         <Grid cols={4}>
           <Card><KPI label="Gns. CPL (all-time)" value="24,29 DKK" color={C.yellow} sub="40.252 leads (korrekt fra mailliste)" /></Card>
@@ -202,7 +202,7 @@ function MoneyModelTab() {
           <Card style={{ borderLeft: `3px solid ${C.green}` }}>
             <div style={{ fontWeight: 700, color: C.green, marginBottom: 10 }}>✓ STYRKER</div>
             {[
-              'Ekstraordinær ROAS: 40,75x netto på Meta Ads — markedsbevist funnel',
+              'Ekstraordinær ROAS: 3,98x netto på Meta Ads — markedsbevist funnel',
               'Lav CPA: 42,26 DKK per betalende kunde er exceptionelt',
               'B.A.C.K TO LIFE all-time: ~2,81M DKK · 649 verificerede kursuskunder',
               'Tripwire fungerer: 2.011+ salg på tværs af 4 versioner',
