@@ -1,0 +1,50 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: npm run build
+      - uses: actions/configure-pages@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - id: deployment
+        uses: actions/deploy-pages@v4
+```
+
+4. Klik **"Commit changes"**
+
+---
+
+**Trin 3 — Aktivér GitHub Pages**
+
+1. Gå til **Settings** (tandhjul øverst i repo)
+2. Klik **"Pages"** i venstre menu
+3. Under **"Source"** — vælg **"GitHub Actions"**
+4. Gem
+
+---
+
+**Trin 4 — Vent 1-2 minutter**
+
+Gå til **"Actions"**-fanen i dit repo. Du kan se buildet køre. Når det er grønt, er dashboardet live på:
+```
+https://[dit-github-brugernavn].github.io/[repo-navn]/
